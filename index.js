@@ -1,3 +1,5 @@
+// 순수함수 => 외부입력 -> 출력이 결정
+
 function 바깥함수(param) {
   const 상태 = param
 
@@ -6,5 +8,5 @@ function 바깥함수(param) {
   }
 }
 
-var 안쪽함수 = 바깥함수()
+const 안쪽함수 = 바깥함수()
 console.log(안쪽함수(200))

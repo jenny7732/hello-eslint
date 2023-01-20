@@ -1,3 +1,4 @@
+/* eslint-disable */ //빨간 밑줄 전체 무시
 /**
  * @type {import('eslint').Linter.Config}
  */
@@ -6,23 +7,23 @@ module.exports = {
 	env: {
 		browser: true,
 		es2021: true,
-		node: true,
+		node: true
 	},
 	// 기본적인 룰셋을 지정
-	"extends": ["eslint:recommended", "plugin:functional/lite"]
-	"plugins": ["functional"],
+	extends: ['eslint:recommended', 'plugin:functional/lite'],
+	plugins: ['functional'],
 	// 특정 파일에만 다른 룰을 지정
 	overrides: [],
 	// 사용환경을 최신 자바스트립트로 가정
 	parserOptions: {
-		ecmaVersion: 'latest',
+		ecmaVersion: 'latest'
 	},
 	// extends 옵션으로 지정한 룰셋을 덮어씌운다
 	rules: {
 		// var는 사용할 수 없다
 		'no-var': ['error'],
 		// 줄바꿈은 유닉스 스타일로 통일하겠다
-		'linebreak-style': ['error', 'unix'],
+		//'linebreak-style': ['error', 'unix'],
 		// 세미콜론은 사용하지 않겠다(타입스크립트 프로젝트에서 권장)
 		semi: ['error', 'never'],
 		// Function.prototype.apply() 를 사용할 때는 spread 연산자를 사용해야 한다
@@ -121,4 +122,3 @@ module.exports = {
 		'quote-props': ['error', 'as-needed'],
 	},
 }
-  
